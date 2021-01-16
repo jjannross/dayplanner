@@ -8,28 +8,23 @@ var dateTime = date + " " + time;
 dateEl.text(dateTime);
 
 // add classes to determine current hour
-
 var d = new Date();
 var t = d.getHours();
-var tB = $("#data-hour");
-console.log(t);
-console.log(tB);
 
-// if  === t
-// currentTime=.getHours
-// if data-hour is < current time, then past class
-// if data-hour = time then present class
-// if data-hour is > then future class
+$(".time-block").each(function () {
+  var rowTime = $(this).find(".saveBtn").data("hour");
+  if (rowTime == t) {
+    $(this).addClass("present");
+  } else if (rowTime < t) {
+    $(this).addClass("past");
+  }
+  else (rowTime > t) {
+    $(this).addClass("future");
+  };
+});
 
-// var now = dayjs(){
-
-//   for (var i = 0; i < now.length; i++) {
-//     var now= now[i]
-//   dayjs().hour()
-
-//save text area input to local storage when button is clicked.
+//save text area input to local storage when button is clicked and pull
 $(".saveBtn").on("click", function (event) {
-  //   $(".description").text();
   var hour = $(event.target).data("hour");
   var text = $(event.target).parent().siblings(".description").children().val();
 
@@ -67,5 +62,3 @@ $("#14").val(time[14]);
 $("#15").val(time[16]);
 $("#16").val(time[15]);
 $("#17").val(time[17]);
-
-
