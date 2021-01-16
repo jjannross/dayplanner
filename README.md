@@ -1,10 +1,9 @@
 # dayplanner
 
-This website is a game in which a user is able to keep track of their calendar, to do items, and activities.
+This website is a game in which a user is able to keep track of their calendar, to do items, and activities. They can enter what they need to do at the corresponding time, click save, and their text will be saved to the local storage. If they close out the brower the input will be saved in local storage and then parsed back out when re-opened. Additionally, the time is captured and used to determine the class styling. ALLOWING FOR
 
-![to be added](./assets/images/1.png)
-![to be added](./assets/images/2.png)
-![to be added](./assets/images/3.png)
+![past-class](./assets/images/current-class.png)
+![current-class](./assets/images/past-class.png)
 
 To visit the day planner [click here](https://jjannross.github.io/dayplanner/)
 

@@ -17,10 +17,9 @@ $(".time-block").each(function () {
     $(this).addClass("present");
   } else if (rowTime < t) {
     $(this).addClass("past");
-  }
-  else (rowTime > t) {
+  } else if (rowTime > t) {
     $(this).addClass("future");
-  };
+  }
 });
 
 //save text area input to local storage when button is clicked and pull
